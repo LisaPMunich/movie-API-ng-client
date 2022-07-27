@@ -14,7 +14,7 @@ const apiURL = 'YOUR_HOSTED_API_URL_HERE/';
 
 export class FetchApiDataService {
   // This will provide HttpClient to the entire class, making it available via this.http
-  apiURL = 'http://localhost:3000';
+  apiURL = 'http://localhost:4200';
 
   constructor(private http: HttpClient) {
   }
