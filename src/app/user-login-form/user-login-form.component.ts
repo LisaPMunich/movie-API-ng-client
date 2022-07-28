@@ -25,13 +25,13 @@ export class UserLoginFormComponent implements OnInit {
   }
 
   loginUser(): void {
-    this.fetchApiData.userLogin(this.userData).subscribe((result) => {
+    this.fetchApiData.userLogin(this.userData).subscribe((result:IUser) => {
       this.dialogRef.close();
-      this.snackBar.open(result, 'OK', {
+      this.snackBar.open(result.Name, 'OK', {
         duration: 2000
       });
     }, (result) => {
-      this.snackBar.open(result, 'OK', {
+      this.snackBar.open(result, 'Login Error', {
         duration: 2000
       });
     });
