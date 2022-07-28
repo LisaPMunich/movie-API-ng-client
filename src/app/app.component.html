@@ -1,21 +1,27 @@
-
 <div class="main-page">
   <h1>
     Welcome to GreenScreen!
   </h1>
   <button
-  mat-raised-button
-  (click)="openUserRegistrationDialog()"
-  style="margin-right: 10px;"
-  color="primary">
+    mat-raised-button
+    (click)="openUserRegistrationDialog()"
+    style="margin-right: 10px;"
+    color="primary">
     Register
   </button>
   <button
-  mat-raised-button
-  (click)="openUserLoginDialog()"
-  style="margin-right: 10px;"
-  color="primary">
+    mat-raised-button
+    (click)="openUserLoginDialog()"
+    style="margin-right: 10px;"
+    color="primary">
     Login
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="openMoviesDialog()"
+  >
+    All Movies
   </button>
 </div>
 

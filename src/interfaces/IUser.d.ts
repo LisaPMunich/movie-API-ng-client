@@ -5,3 +5,5 @@ interface IUser {
   "Email": string;
   "FavoriteMovies": string[];
 }
+
+
