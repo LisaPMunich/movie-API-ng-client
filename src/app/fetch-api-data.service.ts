@@ -5,7 +5,7 @@ import {Observable, throwError} from 'rxjs';
 import {map} from 'rxjs/operators';
 
 
-const apiURL = 'YOUR_HOSTED_API_URL_HERE/';
+const apiURL = 'https://young-fjord-17804.herokuapp.com/';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ const apiURL = 'YOUR_HOSTED_API_URL_HERE/';
 
 export class FetchApiDataService {
   // This will provide HttpClient to the entire class, making it available via this.http
-  apiURL = 'http://localhost:4200';
+  apiURL = 'https://young-fjord-17804.herokuapp.com/';
 
   constructor(private http: HttpClient) {
   }
