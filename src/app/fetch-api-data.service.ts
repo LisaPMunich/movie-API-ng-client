@@ -117,10 +117,10 @@ export class FetchApiDataService {
   // @param name
   // @returns JSON object holding user data
 
-  updateUser(name: string): Observable<any> {
+  updateUser(userData: IUser): Observable<any> {
 
     return this.http
-      .put<IUser>(apiURL + `users/${name}`, {headers: this.getHttpHeaders()})
+      .put<IUser>(apiURL + `users/${userData.Name}`, userData,{headers: this.getHttpHeaders()})
       .pipe(
         map((res: IUser) => res || {}),
         catchError(this.handleError)
@@ -135,7 +135,7 @@ export class FetchApiDataService {
     return this.http
       .delete<string>(apiURL + `users/${name}`, {headers: this.getHttpHeaders()})
       .pipe(
-        map((res:string) => res),
+        map((res: string) => res),
         catchError(this.handleError)
       );
   }

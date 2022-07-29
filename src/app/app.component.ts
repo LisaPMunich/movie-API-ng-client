@@ -1,8 +1,6 @@
-import { Component } from '@angular/core';
-import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
-import { UserLoginFormComponent} from "./user-login-form/user-login-form.component";
+import { Component} from '@angular/core';
 import { MovieCardComponent } from './movie-card/movie-card.component';
-import { MatDialog } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-root',
@@ -10,23 +8,13 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'movie-API-ng-client';
+  title = 'GreenScreen-Angular-client';
 
-  constructor(public dialog: MatDialog) { }
+  constructor() { }
   // this functions opens the dialog when signup button is clicked
-  openUserRegistrationDialog(): void {
-    this.dialog.open(UserRegistrationFormComponent, {
-      width: '280px'
-    });
-  }
-  openUserLoginDialog(): void {
-    this.dialog.open(UserLoginFormComponent, {
-      width: '280px'
-    });
-  }
-  openMoviesDialog(): void {
-    this.dialog.open(MovieCardComponent, {
-      width: '500px'
-    });
-  }
+  // openMoviesDialog(): void {
+  //   this.dialog.open(MovieCardComponent, {
+  //     width: '500px'
+  //   });
+  // }
 }
