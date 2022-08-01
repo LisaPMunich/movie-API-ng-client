@@ -1,19 +1,35 @@
-<div class="main-page">
-  <h1>
-    Welcome to GreenScreen!
-  </h1>
-  <button
-    mat-raised-button
-    (click)="openUserRegistrationDialog()"
-    style="margin-right: 10px;"
-    color="primary">
-    Register
-  </button>
-  <button
-    mat-raised-button
-    (click)="openUserLoginDialog()"
-    style="margin-right: 10px;"
-    color="primary">
-    Login
-  </button>
+<div class="welcome-page">
+  <mat-card class="welcome-card">
+    <mat-card-header class="welcome-card__header">
+      <mat-card-title class="welcome-card__title">
+        Welcome to Green
+        <img
+            src="../../assets/icons8-bear-100.png"
+            class="bear-icon"
+            alt="Icon of a bear by Icons8"
+          />
+        Screen
+      </mat-card-title>
+
+    </mat-card-header>
+    <mat-card-content class="welcome-card__content">
+      <p>Browse and learn more about films and documentaries that focus on protecting the environment</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        (click)="openUserRegistrationDialog()"
+        style="margin-right: 10px;"
+        color="primary">
+        Register
+      </button>
+      <button
+        mat-raised-button
+        (click)="openUserLoginDialog()"
+        style="margin-right: 10px;"
+        color="primary">
+        Login
+      </button>
+    </mat-card-actions>
+  </mat-card>
 </div>

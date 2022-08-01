@@ -7,7 +7,7 @@ import { MatCardActions } from "@angular/material/card";
 
 
 @Component({
-  selector: 'app-user-login-form',
+  selector: 'app-user-login',
   templateUrl: './user-login-form.component.html',
   styleUrls: ['./user-login-form.component.scss']
 })
@@ -26,11 +26,8 @@ export class UserLoginFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe((result:ILoggedInUser) => {
-      this.router.navigate(['movies']);
       console.log(result);
       localStorage.setItem('user', result.user.Name);
       localStorage.setItem('token', result.token);
@@ -38,6 +35,7 @@ export class UserLoginFormComponent implements OnInit {
       this.snackBar.open(result.user.Name, 'OK', {
         duration: 2000
       });
+      this.router.navigate(['movies']);
     }, (result) => {
       this.snackBar.open(result, 'Login Error', {
         duration: 2000

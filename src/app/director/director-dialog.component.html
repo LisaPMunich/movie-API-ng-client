@@ -1,0 +1,20 @@
+<div style="display: flex;">
+<mat-card class="dialog">
+  <mat-card-actions>
+    <button
+      class="close-button"
+      mat-stroked-button
+      mat-dialog-close
+      aria-label="Close director dialog button"
+      color="primary">
+      X
+    </button>
+  </mat-card-actions>
+  <mat-card-title class="dialog__title">{{director.Name}}</mat-card-title>
+  <mat-dialog-content class="dialog__content">
+    <div><span class="content_sub-title">Biography: </span>{{director.Bio}}</div>
+    <div><span class="content_sub-title">Birthday: </span>{{director.Birth}}</div>
+    <div><span class="content_sub-title">Death: </span>{{director.Death}}</div>
+  </mat-dialog-content>
+</mat-card>
+</div>

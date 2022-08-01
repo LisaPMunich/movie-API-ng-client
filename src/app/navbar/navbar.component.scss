@@ -1,0 +1,13 @@
+@import "../../styles/abstract/variables";
+
+.mat-toolbar{
+  background-color: $background-color-dark;
+  color: white;
+}
+.mat-button{
+  color: white;
+}
+
+.spacer{
+  flex: 1 1 auto;
+}

@@ -1,0 +1,18 @@
+<div style="display: flex;">
+<mat-card class="dialog">
+  <mat-card-actions>
+    <button
+      class="close-button"
+      mat-stroked-button
+      mat-dialog-close
+      aria-label="Close genre dialog button"
+      color="primary">
+      X
+    </button>
+  </mat-card-actions>
+  <mat-card-title class="dialog__title">{{genre.Name}}</mat-card-title>
+  <mat-dialog-content class="dialog__content">
+    <div>{{genre.Description}}</div>
+  </mat-dialog-content>
+</mat-card>
+</div>

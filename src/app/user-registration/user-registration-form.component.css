@@ -1,0 +1,16 @@
+.registration-form {
+  box-shadow: none;
+  text-align: center;
+}
+
+.registration-form__header {
+  display: flex;
+  justify-content: center;
+}
+
+.registration-form__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=user-registration.component.css.map */

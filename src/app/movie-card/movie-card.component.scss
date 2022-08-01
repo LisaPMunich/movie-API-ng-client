@@ -1,0 +1,7 @@
+.movie-card {
+  flex: 1 1 auto;
+  &__image {
+    max-height: 200px;
+    width: auto;
+  }
+}

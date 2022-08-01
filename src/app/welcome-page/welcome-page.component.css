@@ -1,6 +1,20 @@
-@import "../../styles/styles";
+/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
 
-.welcome-page{
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #FFFFFF;
+  color: #C5C6C7;
+}
+
+.welcome-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,43 +22,44 @@
   padding: 30px 40px;
 }
 
-.welcome-card{
+.welcome-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $background-color-dark;
-  color: $text-color;
+  background-color: #1F2833;
+  color: #C5C6C7;
   padding: 30px 40px;
   width: 500px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.welcome-card__header{
+.welcome-card__header {
   line-height: 3rem;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-.welcome-card__title{
+.welcome-card__title {
   text-align: center;
   font-size: 3rem;
 }
 
-.bear-icon-container{
+.bear-icon-container {
   margin: 10px 0;
-  text-align: center
+  text-align: center;
 }
 
-.bear-icon{
+.bear-icon {
   width: 35px;
   height: 35px;
 }
 
-.welcome-card__content{
+.welcome-card__content {
   text-align: justify;
   font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 20px;
 }
 
+/*# sourceMappingURL=welcome-page.component.css.map */

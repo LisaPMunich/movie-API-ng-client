@@ -17,7 +17,6 @@ export class ProfileComponent implements OnInit {
   constructor(
     private router: Router,
     public fetchApiDataService: FetchApiDataService,
-    public dialogRef: MatDialogRef<ProfileComponent>,
     public snackBar: MatSnackBar,
     public MatCardActions: MatCardActions,
   ) { }
