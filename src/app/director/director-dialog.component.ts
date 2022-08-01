@@ -13,17 +13,13 @@ export class DirectorDialogComponent implements OnInit {
 
   constructor(
   @Inject(MAT_DIALOG_DATA)
-  public director: {
-    Name: string,
-    Bio: string,
-    Birth?: string,
-    Death?: string
-  },
+  public director: IDirector,
   public fetchApiData: FetchApiDataService,
   public snackBar: MatSnackBar,
 ) { }
 
   ngOnInit(): void {
+    this.director.Death = this.director.Death?.trim();
   }
 
 }

@@ -1,5 +1,3 @@
-@import "../../styles/abstract/variables";
-
 .profile-form {
   display: flex;
   flex-direction: column;
@@ -11,18 +9,18 @@ mat-card-action:last-child {
   margin: 5px;
 }
 
-
-.fav-list{
+.fav-list {
   display: flex;
   flex-direction: column;
 }
 
-
-.header{
+.header {
   font-weight: bold;
-  color: $text-color-emphasis;
+  color: #673ab7;
 }
 
 .fav-list-item {
   font-size: 14px;
 }
+
+/*# sourceMappingURL=profile.component.css.map */

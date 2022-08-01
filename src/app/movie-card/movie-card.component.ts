@@ -66,7 +66,7 @@ export class MovieCardComponent implements OnInit {
   }
 
   // this functions opens the dialog when Director button is clicked
-  openDirectorDialog(Name: string, Bio: string, Birth: string, Death?: string): void {
+  openDirectorDialog(Name: string, Bio: string, Birth?: string, Death?: string): void {
     this.dialog.open(DirectorDialogComponent, {
       data: {
         Name: Name,

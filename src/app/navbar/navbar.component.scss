@@ -3,7 +3,7 @@
 .mat-toolbar{
   background-color: $background-color-dark;
   color: white;
-  box-shadow: 0 0 10px $white;
+  box-shadow: 0 4px 8px 0 $off-white, 0 6px 20px 0 $off-white;
   margin-bottom: 10px;
 
 }
@@ -26,6 +26,7 @@
 .bear-icon--small{
   width: 20px;
   height: 20px;
+  align-items: center;
 }
 
 

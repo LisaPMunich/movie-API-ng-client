@@ -1,3 +1,5 @@
+@import "../../styles/abstract/variables";
+
 .card-wrapper{
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,13 +22,14 @@
   max-width: 300px;
   width: 300px;
   margin: 10px;
-  padding: 20px 10px;
+  padding: 30px 20px;
+
 
 
   &__image {
     max-height: 200px;
     width: auto;
+    border-radius: 5px;
   }
-
-
 }
+

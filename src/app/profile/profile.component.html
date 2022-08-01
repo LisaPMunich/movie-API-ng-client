@@ -1,14 +1,14 @@
-
-  <mat-card class="form">
+<div class="profile-form">
+  <mat-card class="form mat-elevation-z0">
     <mat-card-header class="form__header">
       <mat-card-title class="form__title">Profile</mat-card-title>
     </mat-card-header>
-    <mat-card-content>
+    <mat-card-content class="form__content">
       <form>
         <mat-form-field>
           <input
             matInput
-            [(ngModel)]="userData.Name"
+            [(ngModel)]="user.Name"
             placeholder="Name"
             type="text"
             name="Name"
@@ -18,8 +18,8 @@
         <mat-form-field>
           <input
             matInput
-            [(ngModel)]="userData.Password"
-            type = "password"
+            [(ngModel)]="user.Password"
+            type="password"
             placeholder="Password"
             name="Password"
             [required]="true"
@@ -28,8 +28,8 @@
         <mat-form-field>
           <input
             matInput
-            [(ngModel)]="userData.Email"
-            type = "email"
+            [(ngModel)]="user.Email"
+            type="email"
             placeholder="Email"
             name="Email"
             [required]="true"
@@ -38,27 +38,36 @@
         <mat-form-field>
           <input
             matInput
-            [(ngModel)]="userData.Birthday"
-            type = "date"
+            [(ngModel)]="user.Birthday"
+            type="date"
             placeholder="Birthday"
             name="Birthday"
           >
         </mat-form-field>
       </form>
     </mat-card-content>
-    <button
-      mat-button
-      color="primary"
-      (click)="updateUser()"
-    >
-      Update Info
-    </button>
-    <button
-      mat-button
-      color="primary"
-      (click)="deleteUser()"
-    >
-      Delete Profile
-    </button>
+    <mat-card-actions>
+      <button
+        mat-button
+        class="button"
+        (click)="updateUser()"
+      >
+        Update Info
+      </button>
+      <button
+        mat-button
+        class="button"
+        (click)="deleteUser()"
+      >
+        Delete Profile
+      </button>
+    </mat-card-actions>
+    <mat-list class="fav-list">
+      <h3 matSubheader class="header">Favorite Movies:</h3>
+      <mat-list-item class="fav-list-item" *ngFor="let favMovie of favoriteMovies">
+        {{favMovie.Title}}
+      </mat-list-item>
+    </mat-list>
   </mat-card>
+</div>
 

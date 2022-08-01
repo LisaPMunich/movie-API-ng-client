@@ -9,8 +9,8 @@
   </mat-card-actions>
   <mat-card-title class="dialog__title">{{director.Name}}</mat-card-title>
   <mat-dialog-content class="dialog__content">
-    <div><span class="content_sub-title">Biography: </span>{{director.Bio}}</div>
-    <div><span class="content_sub-title">Birthday: </span>{{director.Birth}}</div>
-    <div><span class="content_sub-title">Death: </span>{{director.Death}}</div>
+    <div><span class="content__sub-title">Biography: </span>{{director.Bio}}</div>
+    <div *ngIf="director.Birth"><span class="content__sub-title">Birthday: </span>{{director.Birth}}</div>
+    <div *ngIf="director.Death"><span class="content__sub-title">Death: </span>{{director.Death}}</div>
   </mat-dialog-content>
 </mat-card>

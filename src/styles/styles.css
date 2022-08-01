@@ -1,6 +1,11 @@
 .form {
+  display: flex;
+  flex-direction: column;
   box-shadow: none;
   text-align: center;
+  max-width: 350px;
+  justify-content: center;
+  justify-items: center;
 }
 
 .form__header {
@@ -12,6 +17,12 @@
   text-align: center;
   margin-bottom: 20px;
   box-shadow: 2px solid #673ab7;
+  padding: 20px;
+}
+
+.form__content {
+  display: flex;
+  flex-direction: column;
 }
 
 .button-wrapper-right {
@@ -21,7 +32,15 @@
 .button-wrapper-justify {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-evenly !important;
+}
+
+.button {
+  background-color: #673ab7;
+  border: none;
+  color: #FFFFFF;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .close-button {
@@ -56,14 +75,14 @@
 
 .dialog__title {
   text-align: center;
-  padding: 0 20px 20px;
+  padding: 20px;
 }
 
 .dialog__content > div {
   padding: 10px 0;
 }
 
-.content_sub-title {
+.content__sub-title {
   font-weight: bold;
   color: #673ab7;
 }

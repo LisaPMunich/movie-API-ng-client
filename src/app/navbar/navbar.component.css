@@ -1,7 +1,7 @@
 .mat-toolbar {
   background-color: #1F2833;
   color: white;
-  box-shadow: 0 0 10px #C5C6C7;
+  box-shadow: 0 4px 8px 0 #C5C6C7, 0 6px 20px 0 #C5C6C7;
   margin-bottom: 10px;
 }
 
@@ -23,6 +23,7 @@
 .bear-icon--small {
   width: 20px;
   height: 20px;
+  align-items: center;
 }
 
 /*# sourceMappingURL=navbar.component.css.map */
