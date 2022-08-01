@@ -1,5 +1,7 @@
 @import "./abstract/variables";
 @import "./components/form";
+@import "./components/buttons";
+@import "./components/dialog";
 
 *{
   box-sizing: border-box;
@@ -14,7 +16,7 @@ body {
   font-family: Roboto,
   "Helvetica Neue",
   sans-serif;
-  background-color: $background-color;
+  background-color: $background-color-dark;
   color: $text-color;
 }
 

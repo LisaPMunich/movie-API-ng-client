@@ -47,7 +47,7 @@ export class FetchApiDataService {
   // make API call to get all movies
   // @returns array of all movie objects in JSON
 
-  getAllMovies(): Observable<any> {
+  loadAllMovies(): Observable<any> {
     return this.http
       .get<IMovie[]>(apiURL + 'movies', { headers: this.getHttpHeaders() })
       .pipe(
@@ -103,8 +103,7 @@ export class FetchApiDataService {
   // @param name
   // @returns JSON object holding user data
 
-  getUser(name: string): Observable<any> {
-
+  loadUser(name: string): Observable<any> {
     return this.http
       .get<IUser>(apiURL + `users/${name}`, {headers: this.getHttpHeaders()})
       .pipe(
@@ -155,7 +154,7 @@ export class FetchApiDataService {
       );
   }
 
-  // make API call to add favorite movies to user profileby name and title
+  // make API call to add favorite movies to user profile by name and title
   // @param name, title
   // @returns JSON object holding movie data
 
@@ -163,9 +162,8 @@ export class FetchApiDataService {
     // Get Authorization token stored in local storage
 
     return this.http
-      .post<IMovie>(apiURL + `users/${name}/movies/${title}`, {headers: this.getHttpHeaders()})
+      .post<IMovie>(apiURL + `users/${name}/movies/${title}`, null,{headers: this.getHttpHeaders()})
       .pipe(
-        map((res: IMovie) => res || {}),
         catchError(this.handleError)
       );
   }
@@ -186,9 +184,11 @@ export class FetchApiDataService {
   deleteFavoriteMovies<IMovie>(name: string, title: string): Observable<any> {
     // Get Authorization token stored in local storage
     return this.http
-      .delete<IMovie>(apiURL + `users/${name}/movies/${title}`, {headers: this.getHttpHeaders()})
+      .delete<string>(apiURL + `users/${name}/movies/${title}`, {
+        headers: this.getHttpHeaders(),
+        responseType: 'text' as any,
+      })
       .pipe(
-        map((res: IMovie) => res || {}),
         catchError(this.handleError)
       );
   }

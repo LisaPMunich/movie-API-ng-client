@@ -1,25 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: #FFFFFF;
-  color: #C5C6C7;
-}
-
 .welcome-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 40px;
+  margin: 30px 40px;
 }
 
 .welcome-card {
@@ -28,7 +12,7 @@ body {
   align-items: center;
   background-color: #1F2833;
   color: #C5C6C7;
-  padding: 30px 40px;
+  padding: 40px 50px;
   width: 500px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

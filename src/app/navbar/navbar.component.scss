@@ -3,11 +3,29 @@
 .mat-toolbar{
   background-color: $background-color-dark;
   color: white;
+  box-shadow: 0 0 10px $white;
+  margin-bottom: 10px;
+
 }
 .mat-button{
   color: white;
 }
 
+.mat-button:hover, .mat-button:focus{
+  color: $emphasis;
+  background: $background-color-light;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
 .spacer{
   flex: 1 1 auto;
+
 }
+
+.bear-icon--small{
+  width: 20px;
+  height: 20px;
+}
+
+

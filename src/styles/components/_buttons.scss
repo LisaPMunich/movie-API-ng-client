@@ -1,3 +1,35 @@
-.close-button{
+@import "../abstract/variables";
 
+.button-wrapper-right{
+  text-align: right;
+}
+
+.button-wrapper-justify{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.close-button{
+  background-color: $background-color-light;
+  border: none;
+  color: $button-color;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.link-button{
+  border: none;
+  color: $text-color-dark;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.link-button:hover{
+  color: $text-color-emphasis;
+  background: none;
+}
+
+.favorite-button{
+  color: $button-color;
 }

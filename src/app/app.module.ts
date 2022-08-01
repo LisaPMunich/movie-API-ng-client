@@ -26,8 +26,6 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { GenreDialogComponent } from './genre/genre-dialog.component';
 import { DirectorDialogComponent } from './director/director-dialog.component';
 import { MovieDetailDialogComponent } from './movie-detail/movie-detail-dialog.component';
-import { FormLayoutComponent } from './form-layout/form-layout.component';
-import { DetailDialogLayoutComponent } from './detail-dialog-layout/detail-dialog-layout.component';
 
 
 @NgModule({
@@ -42,8 +40,7 @@ import { DetailDialogLayoutComponent } from './detail-dialog-layout/detail-dialo
     GenreDialogComponent,
     DirectorDialogComponent,
     MovieDetailDialogComponent,
-    FormLayoutComponent,
-    DetailDialogLayoutComponent,
+
   ],
   imports: [
     BrowserModule,

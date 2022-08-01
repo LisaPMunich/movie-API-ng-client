@@ -1,11 +1,11 @@
-@import "../../styles/styles";
+@import "../../styles/abstract/variables";
 
 .welcome-page{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 40px;
+  margin: 30px 40px;
 }
 
 .welcome-card{
@@ -14,7 +14,7 @@
   align-items: center;
   background-color: $background-color-dark;
   color: $text-color;
-  padding: 30px 40px;
+  padding: 40px 50px;
   width: 500px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
