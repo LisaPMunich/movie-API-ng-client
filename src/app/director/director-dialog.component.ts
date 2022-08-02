@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog'; // close the dialog on success
+import {MAT_DIALOG_DATA} from '@angular/material/dialog'; // close the dialog on success
 import {FetchApiDataService} from "../fetch-api-data.service"; // import API calls
 import {MatSnackBar} from "@angular/material/snack-bar"; // display notifications back to the user
 
@@ -20,6 +20,7 @@ export class DirectorDialogComponent implements OnInit {
 
   ngOnInit(): void {
     this.director.Death = this.director.Death?.trim();
+    this.director.Birth = this.director.Birth?.trim();
   }
 
 }

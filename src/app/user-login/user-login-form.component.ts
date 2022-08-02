@@ -3,7 +3,6 @@ import { MatDialogRef } from '@angular/material/dialog'; // close the dialog on 
 import { FetchApiDataService } from "../fetch-api-data.service"; // import API calls
 import { MatSnackBar } from "@angular/material/snack-bar"; // display notifications back to the user
 import { Router } from '@angular/router';
-import { MatCardActions } from "@angular/material/card";
 
 
 @Component({
@@ -20,7 +19,6 @@ export class UserLoginFormComponent implements OnInit {
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserLoginFormComponent>,
     public snackBar: MatSnackBar,
-    public MatCardActions: MatCardActions,
   ) {}
 
   ngOnInit(): void {

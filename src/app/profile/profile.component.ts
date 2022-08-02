@@ -1,9 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { FetchApiDataService } from "../fetch-api-data.service";
 import { Router } from "@angular/router";
-import { MatDialogRef } from "@angular/material/dialog";
 import { MatSnackBar } from "@angular/material/snack-bar";
-import { MatCardActions } from "@angular/material/card";
 import {UserService} from "../user.service";
 
 @Component({
@@ -22,7 +20,6 @@ export class ProfileComponent implements OnInit {
     public userService: UserService,
     public fetchApiDataService: FetchApiDataService,
     public snackBar: MatSnackBar,
-    public MatCardActions: MatCardActions,
   ) { }
 
   ngOnInit(): void {
