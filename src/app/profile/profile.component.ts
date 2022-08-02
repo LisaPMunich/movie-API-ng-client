@@ -76,7 +76,7 @@ export class ProfileComponent implements OnInit {
   deleteUser() {
     this.fetchApiDataService.deleteUser(this.user.Name).subscribe((resp: IUser[]) => {
       localStorage.removeItem('user');
-      this.router.navigate(['register'])
+      this.router.navigate(['welcome'])
     });
   }
 }
