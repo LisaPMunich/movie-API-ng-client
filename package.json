@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "build:gh-pages": "ng build --output-path docs --base-href /movie-API-ng-client/",
     "build:docs": "typedoc --tsconfig tsconfig.json ./src",
-    "postbuild:gh-pages": "cp docs/index.html docs/404.html"
+    "postbuild:gh-pages": "cp docs/index.html docs/404.html && npm run build:docs"
   },
   "private": true,
   "dependencies": {

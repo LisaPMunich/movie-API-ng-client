@@ -1,0 +1,215 @@
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>movie-api-ng-client</title><meta name="description" content="Documentation for movie-api-ng-client"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">movie-api-ng-client</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1> movie-api-ng-client </h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#movie-api-client-quotgreen-screenquot-in-angular" id="movie-api-client-quotgreen-screenquot-in-angular" style="color: inherit; text-decoration: none;">
+  <h1>Movie-API-Client &quot;Green Screen&quot; in Angular</h1>
+</a>
+<img src="https://user-images.githubusercontent.com/99111208/182326174-7d1479a3-3b68-4cea-a391-330f3685db9d.png">
+
+
+<a href="#description" id="description" style="color: inherit; text-decoration: none;">
+  <h2>Description</h2>
+</a>
+<p>This project is using Angular and Angular Material to build the client-side for a movie application. It complements the server-side (REST API and database). You can see the GitHub repo <a href="https://github.com/LisaPMunich/Movie-API.git">here</a>.</p>
+
+<a href="#objective" id="objective" style="color: inherit; text-decoration: none;">
+  <h2>Objective</h2>
+</a>
+<p>This application was built to explore the differences of building the client-side with Angular instead of React (see client-side built in React <a href="https://github.com/LisaPMunich/Movie-API-client.git">here</a>)</p>
+
+<a href="#user-stories" id="user-stories" style="color: inherit; text-decoration: none;">
+  <h2>User Stories</h2>
+</a>
+<ul>
+<li>As a user, I want to be able to access information on movies, directors, and genres so that I can learn more about movies I have watched or am interested in.</li>
+<li>As a user, I want to be able to create a profile, so that I can save data about my favorite movies.</li>
+</ul>
+
+<a href="#user-flow-chart" id="user-flow-chart" style="color: inherit; text-decoration: none;">
+  <h2>User Flow Chart</h2>
+</a>
+<img src="https://user-images.githubusercontent.com/99111208/182474769-a33c392b-8922-444b-aa35-e459a4fa6219.png">
+
+
+<a href="#key-features" id="key-features" style="color: inherit; text-decoration: none;">
+  <h2>Key Features</h2>
+</a>
+<ul>
+<li>welcome screen with login form &amp; registration form</li>
+<li>list of all movies (after authentication)</li>
+<li>director dialog, genre dialog, synopsis dialog</li>
+<li>profile with <ul>
+<li>data from registration form </li>
+<li>button to update information</li>
+<li>button to delete whole profile</li>
+<li>list of favorite movies (which have been selected from movie list)</li>
+</ul>
+</li>
+</ul>
+<p>This single-page-application provides the following major views - NavBar excluded:</p>
+
+<a href="#welcome-screen" id="welcome-screen" style="color: inherit; text-decoration: none;">
+  <h3>Welcome Screen</h3>
+</a>
+<p>Welcome screen informing about purpose of the app and allowing the user to register and/or login.</p>
+<img src="https://user-images.githubusercontent.com/99111208/182326190-96b9b41e-bae7-4d17-ba36-5153a92a627a.png">
+
+
+<a href="#registration" id="registration" style="color: inherit; text-decoration: none;">
+  <h3>Registration</h3>
+</a>
+<p>Registering for new users (username, password, email, birthday)</p>
+<img src="https://user-images.githubusercontent.com/99111208/182326181-15ed1805-ada9-4135-9b45-af2118a21d7e.png">
+
+
+
+<a href="#login" id="login" style="color: inherit; text-decoration: none;">
+  <h3>Login</h3>
+</a>
+<p>log in with a username and password</p>
+<img src="https://user-images.githubusercontent.com/99111208/182326172-bc2040bf-63fb-4883-8900-2859841ccd54.png">
+
+
+<a href="#main--movie-list" id="main--movie-list" style="color: inherit; text-decoration: none;">
+  <h3>Main / Movie list</h3>
+</a>
+<ul>
+<li>List of ALL movies </li>
+<li>allows user to add and remove (toggle) a movie to their list of favorites by clicking a heart icon</li>
+<li>allows user to click on links to see detailed information about the genre, the director and the synopsis of the movie</li>
+</ul>
+<img src="https://user-images.githubusercontent.com/99111208/182326174-7d1479a3-3b68-4cea-a391-330f3685db9d.png">
+
+
+
+<a href="#synopsis" id="synopsis" style="color: inherit; text-decoration: none;">
+  <h3>Synopsis</h3>
+</a>
+<p>Clicking on a link in the movie card returns a description of the movie story.</p>
+<img src="https://user-images.githubusercontent.com/99111208/182326189-c81bf3cf-8fb7-4efd-bad9-dc83c99f3027.png">
+
+
+<a href="#genre" id="genre" style="color: inherit; text-decoration: none;">
+  <h3>Genre</h3>
+</a>
+<p>Clicking on a link in the movie card returns a description of the genre.</p>
+<img width="1760" alt="Screenshot_README_GenreView" src="https://user-images.githubusercontent.com/99111208/182326169-370fbcbb-5665-4338-a78c-9bccbb66bf8d.png">
+
+
+<a href="#director" id="director" style="color: inherit; text-decoration: none;">
+  <h3>Director</h3>
+</a>
+<p>Clicking on a link in the movie card returns data about the director of the movie (name, bio, birth year, death year)</p>
+<img width="1760" alt="Screenshot_README_DirectorView" src="https://user-images.githubusercontent.com/99111208/182326153-7dfc4e8b-e16c-40d0-8d64-8ea88edfd462.png">
+
+
+<a href="#profile" id="profile" style="color: inherit; text-decoration: none;">
+  <h3>Profile</h3>
+</a>
+<ul>
+<li>Users can update their user info (username, password, email, date of birth)</li>
+<li>Users can delete their profile / deregister</li>
+<li>Display of a list of favorite movies, which were selected by clicking the heart icon in the movie card</li>
+</ul>
+<img src="https://user-images.githubusercontent.com/99111208/182326179-f7564c52-f60b-4e39-9f13-8440d86468c2.png">
+
+
+
+
+<a href="#project-management-tools-and-further-information" id="project-management-tools-and-further-information" style="color: inherit; text-decoration: none;">
+  <h2>Project Management Tools and further information</h2>
+</a>
+
+<a href="#kanban-board-trello-and-story-points" id="kanban-board-trello-and-story-points" style="color: inherit; text-decoration: none;">
+  <h3>Kanban Board (Trello) and Story Points</h3>
+</a>
+<img src="https://user-images.githubusercontent.com/99111208/182331877-89e84925-01ef-4933-8881-8b02c20a3398.png" width="600">
+
+<img src="https://user-images.githubusercontent.com/99111208/182331862-38a9d761-0062-4351-a63a-a1dcb86292a1.png" width="600">
+
+
+
+<a href="#what-challenges-did-i-face-what-did-i-learn--work-in-progress" id="what-challenges-did-i-face-what-did-i-learn--work-in-progress" style="color: inherit; text-decoration: none;">
+  <h2>What challenges did I face, what did I learn? // work in progress</h2>
+</a>
+
+<a href="#-from-installing-angular" id="-from-installing-angular" style="color: inherit; text-decoration: none;">
+  <h3>... from installing Angular</h3>
+</a>
+
+<a href="#-from-implementing-angular-in-contrast-to-react" id="-from-implementing-angular-in-contrast-to-react" style="color: inherit; text-decoration: none;">
+  <h3>... from implementing Angular in contrast to React</h3>
+</a>
+<p>I loved the structure of the Angular project folder. Also installing the components via the Angular CLI was clean and easy. 
+The template of Angular is much more readable than the React code
+the AppComponent code does not generate HTML, it only fetches the data from the backend.
+The biggest difference just looking at the code is that in the Angular version there is a separation of concerns that does not inherently exist in React. One has to implement it oneself.</p>
+<p>In the Angular version, the Model and the View are clearly separated and interact via the AppComponent class.</p>
+
+<a href="#-from-using-typescript-in-contrast-to-javascript" id="-from-using-typescript-in-contrast-to-javascript" style="color: inherit; text-decoration: none;">
+  <h3>... from using TypeScript in contrast to JavaScript</h3>
+</a>
+
+<a href="#-from-deploying-angular-app-to-github-pages" id="-from-deploying-angular-app-to-github-pages" style="color: inherit; text-decoration: none;">
+  <h3>... from deploying Angular app to GitHub pages</h3>
+</a>
+<pre><code><span class="hl-0">&quot;build:gh-pages&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;ng build --output-path docs --base-href /movie-API-ng-client/&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-0">&quot;postbuild:gh-pages&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;cp docs/index.html docs/404.html&quot;</span>
+</code></pre>
+
+<a href="#-from-generating-documentation-with-typedoc" id="-from-generating-documentation-with-typedoc" style="color: inherit; text-decoration: none;">
+  <h3>... from generating documentation with TypeDoc</h3>
+</a>
+<p>The API endpoints are documented with Swagger. Click <a href="https://young-fjord-17804.herokuapp.com/documentation.html/">here</a> to visit this documentation.</p>
+<p>For the client-side I used TypeDoc. </p>
+<img src="https://user-images.githubusercontent.com/99111208/182707129-b09ec4a6-efc3-4c09-b755-b77542acaa74.png" width="600">
+
+<img src="https://user-images.githubusercontent.com/99111208/182707136-11dc7fd6-7a69-4a50-9bd8-44c12d056b04.png" width="600">
+
+<p>Installation of typedoc was straight-forward running</p>
+<pre><code><span class="hl-2">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-2">typedoc</span><span class="hl-1"> --</span><span class="hl-2">save</span><span class="hl-1">-</span><span class="hl-2">dev</span>
+</code></pre>
+<p>Then I defined the typedocOptions in the tsconfig.json file:</p>
+<pre><code><span class="hl-0">&quot;typedocOptions&quot;</span><span class="hl-1">: {</span><br/><span class="hl-0">&quot;entryPoints&quot;</span><span class="hl-2">:</span><span class="hl-1"> [</span><span class="hl-0">&quot;src/main.ts&quot;</span><span class="hl-1">],</span><br/><span class="hl-0">&quot;out&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-0">&quot;docs&quot;</span><br/><span class="hl-1">}</span>
+</code></pre>
+<p><strong>Problem:</strong> When running the build command for the documentation (typedoc src/main.ts) everything was generated except for the classes (my components/views) and interfaces directory.</p>
+<p><strong>Solution:</strong> The reason was that the default generation of typedoc does not suffice. I had to specify the <a href="https://typedoc.org/guides/options/#entrypointstrategy">entryPointStrategy</a> as &quot;expand&quot; in the tsconfig.json file in order to remedy that.</p>
+<p>Also, when running the command to generate the documentation, the entry point should be a general &quot;./src&quot;</p>
+<pre><code><span class="hl-2">typedoc</span><span class="hl-1"> --</span><span class="hl-2">tsconfig</span><span class="hl-1"> </span><span class="hl-2">tsconfig</span><span class="hl-1">.</span><span class="hl-2">json</span><span class="hl-1"> ./</span><span class="hl-2">src</span><span class="hl-1">       </span>
+</code></pre>
+<p>I documented the build command for docs in the <strong>package.json</strong> as follows:</p>
+<pre><code><span class="hl-0">&quot;build:docs&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;typedoc --tsconfig tsconfig.json ./src&quot;</span>
+</code></pre>
+
+<a href="#further-information" id="further-information" style="color: inherit; text-decoration: none;">
+  <h2>Further Information</h2>
+</a>
+<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 13.1.2.</p>
+
+<a href="#development-server" id="development-server" style="color: inherit; text-decoration: none;">
+  <h4>Development server</h4>
+</a>
+<p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
+
+<a href="#code-scaffolding" id="code-scaffolding" style="color: inherit; text-decoration: none;">
+  <h4>Code scaffolding</h4>
+</a>
+<p>Run <code>ng generate component component-name</code> to generate a new component. You can also use <code>ng generate directive|pipe|service|class|guard|interface|enum|module</code>.</p>
+
+<a href="#build" id="build" style="color: inherit; text-decoration: none;">
+  <h4>Build</h4>
+</a>
+<p>Run <code>ng build</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory.</p>
+
+<a href="#running-unit-tests" id="running-unit-tests" style="color: inherit; text-decoration: none;">
+  <h4>Running unit tests</h4>
+</a>
+<p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
+
+<a href="#running-end-to-end-tests" id="running-end-to-end-tests" style="color: inherit; text-decoration: none;">
+  <h4>Running end-to-end tests</h4>
+</a>
+<p>Run <code>ng e2e</code> to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.</p>
+
+<a href="#further-help" id="further-help" style="color: inherit; text-decoration: none;">
+  <h4>Further help</h4>
+</a>
+<p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://angular.io/cli">Angular CLI Overview and Command Reference</a> page.</p>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Modules</a></li><li class=" tsd-kind-module"><a href="modules/app_app_routing_module.html">app/app-<wbr/>routing.module</a></li><li class=" tsd-kind-module"><a href="modules/app_app_component.html">app/app.component</a></li><li class=" tsd-kind-module"><a href="modules/app_app_module.html">app/app.module</a></li><li class=" tsd-kind-module"><a href="modules/app_director_director_dialog_component.html">app/director/director-<wbr/>dialog.component</a></li><li class=" tsd-kind-module"><a href="modules/app_fetch_api_data_service.html">app/fetch-<wbr/>api-<wbr/>data.service</a></li><li class=" tsd-kind-module"><a href="modules/app_genre_genre_dialog_component.html">app/genre/genre-<wbr/>dialog.component</a></li><li class=" tsd-kind-module"><a href="modules/app_movie_card_movie_card_component.html">app/movie-<wbr/>card/movie-<wbr/>card.component</a></li><li class=" tsd-kind-module"><a href="modules/app_movie_detail_movie_detail_dialog_component.html">app/movie-<wbr/>detail/movie-<wbr/>detail-<wbr/>dialog.component</a></li><li class=" tsd-kind-module"><a href="modules/app_navbar_navbar_component.html">app/navbar/navbar.component</a></li><li class=" tsd-kind-module"><a href="modules/app_profile_profile_component.html">app/profile/profile.component</a></li><li class=" tsd-kind-module"><a href="modules/app_user_login_user_login_form_component.html">app/user-<wbr/>login/user-<wbr/>login-<wbr/>form.component</a></li><li class=" tsd-kind-module"><a href="modules/app_user_registration_user_registration_form_component.html">app/user-<wbr/>registration/user-<wbr/>registration-<wbr/>form.component</a></li><li class=" tsd-kind-module"><a href="modules/app_user_service.html">app/user.service</a></li><li class=" tsd-kind-module"><a href="modules/app_welcome_page_welcome_page_component.html">app/welcome-<wbr/>page/welcome-<wbr/>page.component</a></li><li class=" tsd-kind-module"><a href="modules/environments_environment.html">environments/environment</a></li><li class=" tsd-kind-module"><a href="modules/environments_environment_prod.html">environments/environment.prod</a></li><li class=" tsd-kind-module"><a href="modules/interfaces_ILoggedInUser.html">interfaces/ILogged<wbr/>In<wbr/>User</a></li><li class=" tsd-kind-module"><a href="modules/interfaces_IMovie.html">interfaces/IMovie</a></li><li class=" tsd-kind-module"><a href="modules/interfaces_IUser.html">interfaces/IUser</a></li><li class=" tsd-kind-module"><a href="modules/interfaces_IUserLogin.html">interfaces/IUser<wbr/>Login</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>

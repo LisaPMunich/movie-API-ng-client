@@ -86,11 +86,6 @@ Clicking on a link in the movie card returns data about the director of the movi
 
 ## Project Management Tools and further information
 
-### Project Dependencies
-
-<img src="">
-
-
 ### Kanban Board (Trello) and Story Points
 
 <img src="https://user-images.githubusercontent.com/99111208/182331877-89e84925-01ef-4933-8881-8b02c20a3398.png" width="600">
@@ -105,8 +100,7 @@ Clicking on a link in the movie card returns data about the director of the movi
 
 
 ### ... from implementing Angular in contrast to React
-
-
+I loved the structure of the Angular project folder. Also installing the components via the Angular CLI was clean and easy. 
 The template of Angular is much more readable than the React code
 the AppComponent code does not generate HTML, it only fetches the data from the backend.
 The biggest difference just looking at the code is that in the Angular version there is a separation of concerns that does not inherently exist in React. One has to implement it oneself.
@@ -144,8 +138,9 @@ Then I defined the typedocOptions in the tsconfig.json file:
 }
 ```
 
-Then I ran into the problem that when running the build command for the documentation (typedoc src/main.ts) everything was generated except for the classes (my components/views) and interfaces directory.
-The reason was that the default generation of typedoc does not suffice. I had to specify the "entryPointStrategy" as "expand" in the tsconfig.json file in order to remedy that.
+**Problem:** When running the build command for the documentation (typedoc src/main.ts) everything was generated except for the classes (my components/views) and interfaces directory.
+
+**Solution:** The reason was that the default generation of typedoc does not suffice. I had to specify the [entryPointStrategy](https://typedoc.org/guides/options/#entrypointstrategy) as "expand" in the tsconfig.json file in order to remedy that.
 
 Also, when running the command to generate the documentation, the entry point should be a general "./src"
 ```
