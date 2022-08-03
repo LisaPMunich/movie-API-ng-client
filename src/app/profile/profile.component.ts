@@ -26,6 +26,9 @@ export class ProfileComponent implements OnInit {
     this.loadUser();
   }
 
+  /**
+   * fetches user object data with user's current data (Name, Password, Birthday, Favorite Movies)
+   */
   loadUser(): void {
     const userName = this.userService.getName();
 
@@ -55,6 +58,9 @@ export class ProfileComponent implements OnInit {
       });
   }
 
+  /**
+   * loads all movies and checks which movies are the user's favorite movies
+   */
   loadAllMovies(): void {
     this.fetchApiDataService.loadAllMovies()
       .subscribe((resp: IMovie[]) => {
@@ -64,6 +70,10 @@ export class ProfileComponent implements OnInit {
       });
   }
 
+  /**
+   * opens snackbar to inform about successful update of user information
+   * adds user name to local storage and/or overwrites previously stored name
+   */
   updateUser() {
     this.fetchApiDataService.updateUser(
       this.user
@@ -73,6 +83,9 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  /**
+   * deletes the user data set from local storage, logs out and redirects the user to the welcome page
+   */
   deleteUser() {
     this.fetchApiDataService.deleteUser(this.user.Name).subscribe((resp: IUser[]) => {
       localStorage.removeItem('user');

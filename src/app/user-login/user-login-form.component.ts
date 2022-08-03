@@ -24,13 +24,16 @@ export class UserLoginFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * gets user Name and token from API call userLogin, displays success or error message, navigates to Movie list /Homepage
+   */
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe((result:ILoggedInUser) => {
       console.log(result);
       localStorage.setItem('user', result.user.Name);
       localStorage.setItem('token', result.token);
       this.dialogRef.close();
-      this.snackBar.open(result.user.Name, 'OK', {
+      this.snackBar.open(result.user.Name, 'Login successful', {
         duration: 2000
       });
       this.router.navigate(['movies']);
