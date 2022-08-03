@@ -84,7 +84,7 @@ Clicking on a link in the movie card returns data about the director of the movi
 
 
 
-## Project Management Tools and further information
+## Project Management and Handoff
 
 ### Kanban Board (Trello) and Story Points
 
@@ -92,39 +92,39 @@ Clicking on a link in the movie card returns data about the director of the movi
 
 <img src="https://user-images.githubusercontent.com/99111208/182331862-38a9d761-0062-4351-a63a-a1dcb86292a1.png" width="600">
 
+### Documentation with Swagger and TypeDoc
 
-## What challenges did I face, what did I learn? // work in progress
+The API endpoints are documented with Swagger. To visit the documentation click [here](https://young-fjord-17804.herokuapp.com/documentation.html/).
 
-### ... from installing Angular
-
-
-
-### ... from implementing Angular in contrast to React
-I loved the structure of the Angular project folder. Also installing the components via the Angular CLI was clean and easy. 
-The template of Angular is much more readable than the React code
-the AppComponent code does not generate HTML, it only fetches the data from the backend.
-The biggest difference just looking at the code is that in the Angular version there is a separation of concerns that does not inherently exist in React. One has to implement it oneself.
-
-In the Angular version, the Model and the View are clearly separated and interact via the AppComponent class.
-
-### ... from using TypeScript in contrast to JavaScript
-
-### ... from deploying Angular app to GitHub pages
-
-```
-"build:gh-pages": "ng build --output-path docs --base-href /movie-API-ng-client/",
-    "postbuild:gh-pages": "cp docs/index.html docs/404.html"
-```
-
-### ... from generating documentation with TypeDoc
-
-The API endpoints are documented with Swagger. Click [here](https://young-fjord-17804.herokuapp.com/documentation.html/) to visit this documentation.
-
-For the client-side I used TypeDoc. 
+For the client-side I used TypeDoc. To visit the documentation click [here](https://lisapmunich.github.io/movie-API-ng-client/docu/).
 
 <img src="https://user-images.githubusercontent.com/99111208/182707129-b09ec4a6-efc3-4c09-b755-b77542acaa74.png" width="600">
 
 <img src="https://user-images.githubusercontent.com/99111208/182707136-11dc7fd6-7a69-4a50-9bd8-44c12d056b04.png" width="600">
+
+## What challenges did I face, what did I learn? // work in progress
+
+## ... from implementing Angular in contrast to React
+
+I loved the determined clear file structure of the Angular project folder. Also installing the components via the Angular CLI was clean and easy. 
+The template of Angular is much more readable than the React code
+the AppComponent code does not generate HTML, it only fetches the data from the backend.
+The biggest difference just looking at the code is that in the Angular version there is a separation of concerns that does not inherently exist in React. One has to implement it oneself.
+
+Since Angular has built-in libraries (e.g. Material Design) and third-party integrations (e.g.API calls and testing) which can be used out of the box, I did not run into as many dependency issues as I did when working with React. 
+
+Even though I am very happy with the result of the implementation of the client-side with Angular, I feel the need to take a Udemy course on Angular basics to better understand all the aspects of this framework before implementing the next project in Angular. 
+
+
+## ... from deploying Angular app to GitHub pages
+
+At first the deployment did not work. Not the app but the README file was deployed.
+```
+    "build:gh-pages": "ng build --output-path docs --base-href /movie-API-ng-client/",
+    "postbuild:gh-pages": "cp docs/index.html docs/404.html && npm run build:docs"
+```
+
+## ... from generating documentation with TypeDoc
 
 Installation of typedoc was straight-forward running
 ```
@@ -133,14 +133,33 @@ npm install typedoc --save-dev
 Then I defined the typedocOptions in the tsconfig.json file:
 ```
 "typedocOptions": {
-"entryPoints": ["src/main.ts"],
-"out": "docs"
+  "entryPoints": ["src/main.ts"],
+  "out": "docs"
 }
 ```
 
-**Problem:** When running the build command for the documentation (typedoc src/main.ts) everything was generated except for the classes (my components/views) and interfaces directory.
+**Problems with this approach:** 
+1. When running the build command for the documentation ($ typedoc src/main.ts) everything was generated except for the classes (my components/views) and interfaces directory.
+2. When deploying the docs to GitHub pages, the documentation kept overwriting my deployment of the application and using the index.html.
 
-**Solution:** The reason was that the default generation of typedoc does not suffice. I had to specify the [entryPointStrategy](https://typedoc.org/guides/options/#entrypointstrategy) as "expand" in the tsconfig.json file in order to remedy that.
+
+**Solution:** 
+1. The reason was that the default generation of typedoc does not suffice. I had to specify the [entryPointStrategy](https://typedoc.org/guides/options/#entrypointstrategy) as "expand" in the tsconfig.json file in order to remedy that. Afterwards the typedocOptions looked like this
+  ```
+  "typedocOptions": {
+    "entryPoints": ["src/main.ts"],
+    "entryPointStrategy": "expand",
+    "out": "docs"
+  }
+  ```
+2. I had to further adjust the typedocOptions in the package.json and moved the documentation to docs/docu to stop overwriting index.html of the app.
+  ```
+  "typedocOptions": {
+  "entryPoints": ["src/main.ts"],
+  "entryPointStrategy": "expand",
+  "out": "docs/docu/"
+  }
+  ```
 
 Also, when running the command to generate the documentation, the entry point should be a general "./src"
 ```
@@ -152,6 +171,9 @@ I documented the build command for docs in the **package.json** as follows:
 ```
 
 ## Further Information
+
+<details>
+  <summary>Click to expand!</summary>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
@@ -178,3 +200,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 #### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+</details>
