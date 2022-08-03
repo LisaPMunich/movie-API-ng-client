@@ -9,6 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "build:gh-pages": "ng build --output-path docs --base-href /movie-API-ng-client/",
+    "build:docs": "typedoc --tsconfig tsconfig.json ./src",
     "postbuild:gh-pages": "cp docs/index.html docs/404.html"
   },
   "private": true,
@@ -28,7 +29,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.1.2",
+    "@angular-devkit/build-angular": "^13.3.9",
     "@angular-eslint/builder": "14.0.2",
     "@angular-eslint/eslint-plugin": "14.0.2",
     "@angular-eslint/eslint-plugin-template": "14.0.2",
@@ -48,6 +49,7 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "typedoc": "^0.22.18",
     "typescript": "~4.5.2"
   }
 }

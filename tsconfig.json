@@ -28,5 +28,12 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
+  },
+  "typedocOptions": {
+    "entryPoints": [
+      "src/main.ts"
+    ],
+    "entryPointStrategy": "expand",
+    "out": "docs"
   }
 }
