@@ -122,6 +122,40 @@ In the Angular version, the Model and the View are clearly separated and interac
     "postbuild:gh-pages": "cp docs/index.html docs/404.html"
 ```
 
+### ... from generating documentation with TypeDoc
+
+The API endpoints are documented with Swagger. Click [here](https://young-fjord-17804.herokuapp.com/documentation.html/) to visit this documentation.
+
+For the client-side I used TypeDoc. 
+
+<img src="https://user-images.githubusercontent.com/99111208/182707129-b09ec4a6-efc3-4c09-b755-b77542acaa74.png" width="600">
+
+<img src="https://user-images.githubusercontent.com/99111208/182707136-11dc7fd6-7a69-4a50-9bd8-44c12d056b04.png" width="600">
+
+Installation of typedoc was straight-forward running
+```
+npm install typedoc --save-dev
+```
+Then I defined the typedocOptions in the tsconfig.json file:
+```
+"typedocOptions": {
+"entryPoints": ["src/main.ts"],
+"out": "docs"
+}
+```
+
+Then I ran into the problem that when running the build command for the documentation (typedoc src/main.ts) everything was generated except for the classes (my components/views) and interfaces directory.
+The reason was that the default generation of typedoc does not suffice. I had to specify the "entryPointStrategy" as "expand" in the tsconfig.json file in order to remedy that.
+
+Also, when running the command to generate the documentation, the entry point should be a general "./src"
+```
+typedoc --tsconfig tsconfig.json ./src       
+```
+I documented the build command for docs in the **package.json** as follows:
+```
+"build:docs": "typedoc --tsconfig tsconfig.json ./src"
+```
+
 ## Further Information
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
