@@ -84,7 +84,7 @@ Clicking on a link in the movie card returns data about the director of the movi
 
 
 
-## Project Management and Handoff
+## Project Management and Documentation
 
 ### Kanban Board (Trello) and Story Points
 
@@ -96,7 +96,7 @@ Clicking on a link in the movie card returns data about the director of the movi
 
 The API endpoints are documented with Swagger. To visit the documentation click [here](https://young-fjord-17804.herokuapp.com/documentation.html/).
 
-For the client-side I used TypeDoc. To visit the documentation click [here](https://lisapmunich.github.io/movie-API-ng-client/docu/).
+For the documentation of the client-side I used TypeDoc. To visit the documentation click [here](https://lisapmunich.github.io/movie-API-ng-client/docu/).
 
 <img src="https://user-images.githubusercontent.com/99111208/182707129-b09ec4a6-efc3-4c09-b755-b77542acaa74.png" width="600">
 
@@ -177,27 +177,27 @@ I documented the build command for docs in the **package.json** as follows:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
-#### Development server
+### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-#### Code scaffolding
+### Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-#### Build
+### Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-#### Running unit tests
+### Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-#### Running end-to-end tests
+### Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-#### Further help
+### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
