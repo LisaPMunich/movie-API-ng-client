@@ -114,8 +114,8 @@
 
 
 
-<a href="#project-management-tools-and-further-information" id="project-management-tools-and-further-information" style="color: inherit; text-decoration: none;">
-  <h2>Project Management Tools and further information</h2>
+<a href="#project-management-and-documentation" id="project-management-and-documentation" style="color: inherit; text-decoration: none;">
+  <h2>Project Management and Documentation</h2>
 </a>
 
 <a href="#kanban-board-trello-and-story-points" id="kanban-board-trello-and-story-points" style="color: inherit; text-decoration: none;">
@@ -126,90 +126,105 @@
 <img src="https://user-images.githubusercontent.com/99111208/182331862-38a9d761-0062-4351-a63a-a1dcb86292a1.png" width="600">
 
 
+<a href="#documentation-with-swagger-and-typedoc" id="documentation-with-swagger-and-typedoc" style="color: inherit; text-decoration: none;">
+  <h3>Documentation with Swagger and TypeDoc</h3>
+</a>
+<p>The API endpoints are documented with Swagger. To visit the documentation click <a href="https://young-fjord-17804.herokuapp.com/documentation.html/">here</a>.</p>
+<p>For the documentation of the client-side I used TypeDoc. To visit the documentation click <a href="https://lisapmunich.github.io/movie-API-ng-client/docu/">here</a>.</p>
+<img src="https://user-images.githubusercontent.com/99111208/182707129-b09ec4a6-efc3-4c09-b755-b77542acaa74.png" width="600">
+
+<img src="https://user-images.githubusercontent.com/99111208/182707136-11dc7fd6-7a69-4a50-9bd8-44c12d056b04.png" width="600">
+
 
 <a href="#what-challenges-did-i-face-what-did-i-learn--work-in-progress" id="what-challenges-did-i-face-what-did-i-learn--work-in-progress" style="color: inherit; text-decoration: none;">
   <h2>What challenges did I face, what did I learn? // work in progress</h2>
 </a>
 
-<a href="#-from-installing-angular" id="-from-installing-angular" style="color: inherit; text-decoration: none;">
-  <h3>... from installing Angular</h3>
-</a>
-
 <a href="#-from-implementing-angular-in-contrast-to-react" id="-from-implementing-angular-in-contrast-to-react" style="color: inherit; text-decoration: none;">
-  <h3>... from implementing Angular in contrast to React</h3>
+  <h2>... from implementing Angular in contrast to React</h2>
 </a>
-<p>I loved the structure of the Angular project folder. Also installing the components via the Angular CLI was clean and easy. 
+<p>I loved the determined clear file structure of the Angular project folder. Also installing the components via the Angular CLI was clean and easy. 
 The template of Angular is much more readable than the React code
 the AppComponent code does not generate HTML, it only fetches the data from the backend.
 The biggest difference just looking at the code is that in the Angular version there is a separation of concerns that does not inherently exist in React. One has to implement it oneself.</p>
-<p>In the Angular version, the Model and the View are clearly separated and interact via the AppComponent class.</p>
-
-<a href="#-from-using-typescript-in-contrast-to-javascript" id="-from-using-typescript-in-contrast-to-javascript" style="color: inherit; text-decoration: none;">
-  <h3>... from using TypeScript in contrast to JavaScript</h3>
-</a>
+<p>Since Angular has built-in libraries (e.g. Material Design) and third-party integrations (e.g.API calls and testing) which can be used out of the box, I did not run into as many dependency issues as I did when working with React. </p>
+<p>Even though I am very happy with the result of the implementation of the client-side with Angular, I feel the need to take a Udemy course on Angular basics to better understand all the aspects of this framework before implementing the next project in Angular. </p>
 
 <a href="#-from-deploying-angular-app-to-github-pages" id="-from-deploying-angular-app-to-github-pages" style="color: inherit; text-decoration: none;">
-  <h3>... from deploying Angular app to GitHub pages</h3>
+  <h2>... from deploying Angular app to GitHub pages</h2>
 </a>
-<pre><code><span class="hl-0">&quot;build:gh-pages&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;ng build --output-path docs --base-href /movie-API-ng-client/&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-0">&quot;postbuild:gh-pages&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;cp docs/index.html docs/404.html&quot;</span>
+<p>At first the deployment did not work. Not the app but the README file was deployed.</p>
+<pre><code><span class="hl-0">    </span><span class="hl-1">&quot;build:gh-pages&quot;</span><span class="hl-0">: </span><span class="hl-1">&quot;ng build --output-path docs --base-href /movie-API-ng-client/&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-1">&quot;postbuild:gh-pages&quot;</span><span class="hl-0">: </span><span class="hl-1">&quot;cp docs/index.html docs/404.html &amp;&amp; npm run build:docs&quot;</span>
 </code></pre>
 
 <a href="#-from-generating-documentation-with-typedoc" id="-from-generating-documentation-with-typedoc" style="color: inherit; text-decoration: none;">
-  <h3>... from generating documentation with TypeDoc</h3>
+  <h2>... from generating documentation with TypeDoc</h2>
 </a>
-<p>The API endpoints are documented with Swagger. Click <a href="https://young-fjord-17804.herokuapp.com/documentation.html/">here</a> to visit this documentation.</p>
-<p>For the client-side I used TypeDoc. </p>
-<img src="https://user-images.githubusercontent.com/99111208/182707129-b09ec4a6-efc3-4c09-b755-b77542acaa74.png" width="600">
-
-<img src="https://user-images.githubusercontent.com/99111208/182707136-11dc7fd6-7a69-4a50-9bd8-44c12d056b04.png" width="600">
-
 <p>Installation of typedoc was straight-forward running</p>
-<pre><code><span class="hl-2">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-2">typedoc</span><span class="hl-1"> --</span><span class="hl-2">save</span><span class="hl-1">-</span><span class="hl-2">dev</span>
+<pre><code><span class="hl-2">npm</span><span class="hl-0"> </span><span class="hl-2">install</span><span class="hl-0"> </span><span class="hl-2">typedoc</span><span class="hl-0"> --</span><span class="hl-2">save</span><span class="hl-0">-</span><span class="hl-2">dev</span>
 </code></pre>
 <p>Then I defined the typedocOptions in the tsconfig.json file:</p>
-<pre><code><span class="hl-0">&quot;typedocOptions&quot;</span><span class="hl-1">: {</span><br/><span class="hl-0">&quot;entryPoints&quot;</span><span class="hl-2">:</span><span class="hl-1"> [</span><span class="hl-0">&quot;src/main.ts&quot;</span><span class="hl-1">],</span><br/><span class="hl-0">&quot;out&quot;</span><span class="hl-2">:</span><span class="hl-1"> </span><span class="hl-0">&quot;docs&quot;</span><br/><span class="hl-1">}</span>
+<pre><code><span class="hl-1">&quot;typedocOptions&quot;</span><span class="hl-0">: {</span><br/><span class="hl-0">  </span><span class="hl-1">&quot;entryPoints&quot;</span><span class="hl-2">:</span><span class="hl-0"> [</span><span class="hl-1">&quot;src/main.ts&quot;</span><span class="hl-0">],</span><br/><span class="hl-0">  </span><span class="hl-1">&quot;out&quot;</span><span class="hl-2">:</span><span class="hl-0"> </span><span class="hl-1">&quot;docs&quot;</span><br/><span class="hl-0">}</span>
 </code></pre>
-<p><strong>Problem:</strong> When running the build command for the documentation (typedoc src/main.ts) everything was generated except for the classes (my components/views) and interfaces directory.</p>
-<p><strong>Solution:</strong> The reason was that the default generation of typedoc does not suffice. I had to specify the <a href="https://typedoc.org/guides/options/#entrypointstrategy">entryPointStrategy</a> as &quot;expand&quot; in the tsconfig.json file in order to remedy that.</p>
+<p><strong>Problems with this approach:</strong> </p>
+<ol>
+<li>When running the build command for the documentation ($ typedoc src/main.ts) everything was generated except for the classes (my components/views) and interfaces directory.</li>
+<li>When deploying the docs to GitHub pages, the documentation kept overwriting my deployment of the application and using the index.html.</li>
+</ol>
+<p><strong>Solution:</strong> </p>
+<ol>
+<li>The reason was that the default generation of typedoc does not suffice. I had to specify the <a href="https://typedoc.org/guides/options/#entrypointstrategy">entryPointStrategy</a> as &quot;expand&quot; in the tsconfig.json file in order to remedy that. Afterwards the typedocOptions looked like this</li>
+</ol>
+<pre><code><span class="hl-1">&quot;typedocOptions&quot;</span><span class="hl-0">: {</span><br/><span class="hl-0">  </span><span class="hl-1">&quot;entryPoints&quot;</span><span class="hl-2">:</span><span class="hl-0"> [</span><span class="hl-1">&quot;src/main.ts&quot;</span><span class="hl-0">],</span><br/><span class="hl-0">  </span><span class="hl-1">&quot;entryPointStrategy&quot;</span><span class="hl-2">:</span><span class="hl-0"> </span><span class="hl-1">&quot;expand&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-1">&quot;out&quot;</span><span class="hl-2">:</span><span class="hl-0"> </span><span class="hl-1">&quot;docs&quot;</span><br/><span class="hl-0">}</span>
+</code></pre>
+<ol start="2">
+<li>I had to further adjust the typedocOptions in the package.json and moved the documentation to docs/docu to stop overwriting index.html of the app.</li>
+</ol>
+<pre><code><span class="hl-1">&quot;typedocOptions&quot;</span><span class="hl-0">: {</span><br/><span class="hl-1">&quot;entryPoints&quot;</span><span class="hl-2">:</span><span class="hl-0"> [</span><span class="hl-1">&quot;src/main.ts&quot;</span><span class="hl-0">],</span><br/><span class="hl-1">&quot;entryPointStrategy&quot;</span><span class="hl-2">:</span><span class="hl-0"> </span><span class="hl-1">&quot;expand&quot;</span><span class="hl-0">,</span><br/><span class="hl-1">&quot;out&quot;</span><span class="hl-2">:</span><span class="hl-0"> </span><span class="hl-1">&quot;docs/docu/&quot;</span><br/><span class="hl-0">}</span>
+</code></pre>
 <p>Also, when running the command to generate the documentation, the entry point should be a general &quot;./src&quot;</p>
-<pre><code><span class="hl-2">typedoc</span><span class="hl-1"> --</span><span class="hl-2">tsconfig</span><span class="hl-1"> </span><span class="hl-2">tsconfig</span><span class="hl-1">.</span><span class="hl-2">json</span><span class="hl-1"> ./</span><span class="hl-2">src</span><span class="hl-1">       </span>
+<pre><code><span class="hl-2">typedoc</span><span class="hl-0"> --</span><span class="hl-2">tsconfig</span><span class="hl-0"> </span><span class="hl-2">tsconfig</span><span class="hl-0">.</span><span class="hl-2">json</span><span class="hl-0"> ./</span><span class="hl-2">src</span><span class="hl-0">       </span>
 </code></pre>
 <p>I documented the build command for docs in the <strong>package.json</strong> as follows:</p>
-<pre><code><span class="hl-0">&quot;build:docs&quot;</span><span class="hl-1">: </span><span class="hl-0">&quot;typedoc --tsconfig tsconfig.json ./src&quot;</span>
+<pre><code><span class="hl-1">&quot;build:docs&quot;</span><span class="hl-0">: </span><span class="hl-1">&quot;typedoc --tsconfig tsconfig.json ./src&quot;</span>
 </code></pre>
 
 <a href="#further-information" id="further-information" style="color: inherit; text-decoration: none;">
   <h2>Further Information</h2>
 </a>
+<details>
+  <summary>Click to expand!</summary>
+
 <p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 13.1.2.</p>
 
 <a href="#development-server" id="development-server" style="color: inherit; text-decoration: none;">
-  <h4>Development server</h4>
+  <h3>Development server</h3>
 </a>
 <p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
 
 <a href="#code-scaffolding" id="code-scaffolding" style="color: inherit; text-decoration: none;">
-  <h4>Code scaffolding</h4>
+  <h3>Code scaffolding</h3>
 </a>
 <p>Run <code>ng generate component component-name</code> to generate a new component. You can also use <code>ng generate directive|pipe|service|class|guard|interface|enum|module</code>.</p>
 
 <a href="#build" id="build" style="color: inherit; text-decoration: none;">
-  <h4>Build</h4>
+  <h3>Build</h3>
 </a>
 <p>Run <code>ng build</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory.</p>
 
 <a href="#running-unit-tests" id="running-unit-tests" style="color: inherit; text-decoration: none;">
-  <h4>Running unit tests</h4>
+  <h3>Running unit tests</h3>
 </a>
 <p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
 
 <a href="#running-end-to-end-tests" id="running-end-to-end-tests" style="color: inherit; text-decoration: none;">
-  <h4>Running end-to-end tests</h4>
+  <h3>Running end-to-end tests</h3>
 </a>
 <p>Run <code>ng e2e</code> to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.</p>
 
 <a href="#further-help" id="further-help" style="color: inherit; text-decoration: none;">
-  <h4>Further help</h4>
+  <h3>Further help</h3>
 </a>
 <p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://angular.io/cli">Angular CLI Overview and Command Reference</a> page.</p>
+</details>
 </div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Modules</a></li><li class=" tsd-kind-module"><a href="modules/app_app_routing_module.html">app/app-<wbr/>routing.module</a></li><li class=" tsd-kind-module"><a href="modules/app_app_component.html">app/app.component</a></li><li class=" tsd-kind-module"><a href="modules/app_app_module.html">app/app.module</a></li><li class=" tsd-kind-module"><a href="modules/app_director_director_dialog_component.html">app/director/director-<wbr/>dialog.component</a></li><li class=" tsd-kind-module"><a href="modules/app_fetch_api_data_service.html">app/fetch-<wbr/>api-<wbr/>data.service</a></li><li class=" tsd-kind-module"><a href="modules/app_genre_genre_dialog_component.html">app/genre/genre-<wbr/>dialog.component</a></li><li class=" tsd-kind-module"><a href="modules/app_movie_card_movie_card_component.html">app/movie-<wbr/>card/movie-<wbr/>card.component</a></li><li class=" tsd-kind-module"><a href="modules/app_movie_detail_movie_detail_dialog_component.html">app/movie-<wbr/>detail/movie-<wbr/>detail-<wbr/>dialog.component</a></li><li class=" tsd-kind-module"><a href="modules/app_navbar_navbar_component.html">app/navbar/navbar.component</a></li><li class=" tsd-kind-module"><a href="modules/app_profile_profile_component.html">app/profile/profile.component</a></li><li class=" tsd-kind-module"><a href="modules/app_user_login_user_login_form_component.html">app/user-<wbr/>login/user-<wbr/>login-<wbr/>form.component</a></li><li class=" tsd-kind-module"><a href="modules/app_user_registration_user_registration_form_component.html">app/user-<wbr/>registration/user-<wbr/>registration-<wbr/>form.component</a></li><li class=" tsd-kind-module"><a href="modules/app_user_service.html">app/user.service</a></li><li class=" tsd-kind-module"><a href="modules/app_welcome_page_welcome_page_component.html">app/welcome-<wbr/>page/welcome-<wbr/>page.component</a></li><li class=" tsd-kind-module"><a href="modules/environments_environment.html">environments/environment</a></li><li class=" tsd-kind-module"><a href="modules/environments_environment_prod.html">environments/environment.prod</a></li><li class=" tsd-kind-module"><a href="modules/interfaces_ILoggedInUser.html">interfaces/ILogged<wbr/>In<wbr/>User</a></li><li class=" tsd-kind-module"><a href="modules/interfaces_IMovie.html">interfaces/IMovie</a></li><li class=" tsd-kind-module"><a href="modules/interfaces_IUser.html">interfaces/IUser</a></li><li class=" tsd-kind-module"><a href="modules/interfaces_IUserLogin.html">interfaces/IUser<wbr/>Login</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
