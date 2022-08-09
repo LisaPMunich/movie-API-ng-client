@@ -1,4 +1,6 @@
 # Movie-API-Client "Green Screen" in Angular
+![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https://github.com/Tanu-N-Prabhu/Python)
+
 <img src="https://user-images.githubusercontent.com/99111208/182326174-7d1479a3-3b68-4cea-a391-330f3685db9d.png">
 
 ## Description
@@ -200,5 +202,32 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+### Run Locally
+
+Clone the project
+
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
 
 </details>
