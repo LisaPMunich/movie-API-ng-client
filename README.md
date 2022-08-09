@@ -1,4 +1,6 @@
 # Movie-API-Client "Green Screen" in Angular
+![visitor badge](https://visitor-badge.glitch.me/badge?page_id=LisaPMunich.visitor-badge)
+
 <img src="https://user-images.githubusercontent.com/99111208/182326174-7d1479a3-3b68-4cea-a391-330f3685db9d.png">
 
 ## Description
