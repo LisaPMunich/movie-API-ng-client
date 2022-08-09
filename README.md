@@ -1,5 +1,5 @@
 # Movie-API-Client "Green Screen" in Angular
-![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https://github.com/Tanu-N-Prabhu/Python)
+![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https://github.com/LisaPMunich/movie-API-ng-client)
 
 <img src="https://user-images.githubusercontent.com/99111208/182326174-7d1479a3-3b68-4cea-a391-330f3685db9d.png">
 
