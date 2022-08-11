@@ -3,6 +3,7 @@ import { MatDialogRef } from '@angular/material/dialog'; // close the dialog on 
 import { FetchApiDataService } from "../fetch-api-data.service"; // import API calls
 import { MatSnackBar } from "@angular/material/snack-bar"; // display notifications back to the user
 import { Router } from '@angular/router';
+import {UserService} from "../user.service";
 
 
 @Component({
@@ -30,6 +31,7 @@ export class UserLoginFormComponent implements OnInit {
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe((result:ILoggedInUser) => {
       console.log(result);
+
       localStorage.setItem('user', result.user.Name);
       localStorage.setItem('token', result.token);
       this.dialogRef.close();
