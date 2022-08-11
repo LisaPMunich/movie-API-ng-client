@@ -2,6 +2,11 @@
 
 <img src="https://user-images.githubusercontent.com/99111208/182326174-7d1479a3-3b68-4cea-a391-330f3685db9d.png">
 
+<video width="500" height="600" controls>
+  <source src="./src/assets/Movie-API-ng-client_Demo_conv.webp" type="video/webp">
+  Your browser does not support the video tag.
+</video>
+
 ## Description
 This project is using Angular and Angular Material to build the client-side for a movie application. It complements the server-side (REST API and database). You can see the GitHub repo [here](https://github.com/LisaPMunich/Movie-API.git).
 
