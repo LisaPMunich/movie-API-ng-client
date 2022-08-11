@@ -103,6 +103,32 @@ For the documentation of the client-side I used TypeDoc. To visit the documentat
 
 <img src="https://user-images.githubusercontent.com/99111208/182707136-11dc7fd6-7a69-4a50-9bd8-44c12d056b04.png" width="600">
 
+### How To Run Project Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/LisaPMunich/movie-API-ng-client
+```
+
+Go to the project directory
+
+```bash
+  cd movie-API-ng-client
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
 ## What challenges did I face, what did I learn? // work in progress
 
 ## ... from implementing Angular in contrast to React
@@ -201,32 +227,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-### Run Locally
-
-Clone the project
-
-```bash
-  git clone https://link-to-project
-```
-
-Go to the project directory
-
-```bash
-  cd my-project
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-Start the server
-
-```bash
-  npm run start
-```
 
 
 </details>
