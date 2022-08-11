@@ -138,9 +138,11 @@ export class FetchApiDataService {
    */
   deleteUser(name: string): Observable<any> {
     return this.http
-      .delete<string>(apiURL + `users/${name}`, {headers: this.getHttpHeaders()})
+      .delete<string>(apiURL + `users/${name}`, {
+        headers: this.getHttpHeaders(),
+        responseType: 'text' as any, // typeScript throws error, that response type might not be text. Adding "as any" type assertion suppresses error
+      })
       .pipe(
-        map((res: string) => res),
         catchError(this.handleError)
       );
   }

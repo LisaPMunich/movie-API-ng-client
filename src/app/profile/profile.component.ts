@@ -78,7 +78,7 @@ export class ProfileComponent implements OnInit {
     this.fetchApiDataService.updateUser(
       this.user
     ).subscribe((resp: IUser) => {
-      this.snackBar.open('User updated.')
+      this.snackBar.open('User updated.', undefined, { duration: 3000 })
       localStorage.setItem('user', resp.Name);
     });
   }
@@ -87,7 +87,7 @@ export class ProfileComponent implements OnInit {
    * deletes the user data set from local storage, logs out and redirects the user to the welcome page
    */
   deleteUser() {
-    this.fetchApiDataService.deleteUser(this.user.Name).subscribe((resp: IUser[]) => {
+    this.fetchApiDataService.deleteUser(this.user.Name).subscribe((resp: string) => {
       localStorage.removeItem('user');
       this.router.navigate(['welcome'])
     });
